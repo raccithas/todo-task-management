@@ -51,11 +51,9 @@ This is a full-stack **Todo Task Management Web Application** built using **Reac
 
 ---
 
-## 📝 Assumptions
+## 📝 Live Link
 
-- Only **Google login** is implemented as part of the social login requirement, assuming it's sufficient for the hackathon.
-- Tasks are scoped and retrieved based on the currently authenticated user via Firebase UID.
-- Importance and Planner features are implemented as local task filters, not stored separately in the DB schema.
+[Live Link](https://taskmanagement-tau-one.vercel.app/)
 
 ---
 
