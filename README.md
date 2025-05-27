@@ -41,7 +41,7 @@ This is a full-stack **Todo Task Management Web Application** built using **Reac
 
 ## 🧱 Architecture Diagram
 
-![Architecture Diagram](https://drive.google.com/file/d/1AyGQWW7k-LSAnPTeERZ2ibkkEqL5Gc2T/view?usp=sharing)
+![Architecture Diagram](https://drive.google.com/file/d/1IRN7utjy1q965V63VSOUnzMMbavqbBCh/view?usp=sharing)
 
 ---
 
