@@ -1,0 +1,147 @@
+.profile-form {
+  padding: 25px;
+}
+
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  background: #7c4dff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.change-avatar-btn {
+  padding: 8px 16px;
+  background: #f7fafc;
+  color: #718096;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.change-avatar-btn:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-button,
+.save-button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button {
+  background: #f7fafc;
+  color: #718096;
+  border: 2px solid #e2e8f0;
+}
+
+.cancel-button:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.save-button {
+  background: #7c4dff;
+  color: white;
+}
+
+.save-button:hover {
+  background: #6c3ce8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 77, 255, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Desktop responsive modal */
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .profile-form {
+    padding: 30px 40px;
+  }
+
+  .modal-header {
+    padding: 30px 40px 0;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .profile-avatar-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .form-buttons {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-content {
+    max-width: 700px;
+  }
+
+  .profile-form {
+    padding: 40px 50px;
+  }
+
+  .modal-header {
+    padding: 40px 50px 0;
+  }
+
+  /* Two column layout for larger screens */
+  .profile-form-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .profile-avatar-section {
+    grid-column: 1 / -1;
+  }
+
+  .form-buttons {
+    grid-column: 1 / -1;
+  }
+}

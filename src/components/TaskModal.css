@@ -1,0 +1,257 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 25px 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  color: #2d3748;
+  margin: 0;
+  font-weight: 700;
+}
+
+.close-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f7fafc;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #718096;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: #e2e8f0;
+  transform: scale(1.1);
+}
+
+.task-form {
+  padding: 25px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.type-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.type-button {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: #718096;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.type-button.active {
+  background: #7c4dff;
+  color: white;
+  border-color: #7c4dff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(124, 77, 255, 0.3);
+}
+
+.type-button:hover:not(.active) {
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+.date-input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.create-button {
+  width: 100%;
+  padding: 15px;
+  background: #ffa726;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.create-button:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 167, 38, 0.3);
+}
+
+/* Desktop responsive modal */
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .task-form {
+    padding: 30px 40px;
+  }
+
+  .modal-header {
+    padding: 30px 40px 0;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .type-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .date-input-wrapper {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-content {
+    max-width: 700px;
+  }
+
+  .task-form {
+    padding: 40px 50px;
+  }
+
+  .modal-header {
+    padding: 40px 50px 0;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 20px 20px 0;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .task-form {
+    padding: 20px;
+  }
+
+  .type-buttons {
+    flex-direction: column;
+  }
+}
