@@ -65,8 +65,7 @@ This is a full-stack **Todo Task Management Web Application** built using **Reac
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/katomaran-todo-app.git
-cd katomaran-todo-app
+git clone https://github.com/raccithas/todo-task-management
 
 # Install dependencies
 npm i
