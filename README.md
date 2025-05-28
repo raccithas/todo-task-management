@@ -57,6 +57,10 @@ This is a full-stack **Todo Task Management Web Application** built using **Reac
 
 ---
 
+“This project is a part of a hackathon run by
+https://www.katomaran.com ”
+
+
 ## 🛠️ Installation and Setup
 
 ```bash
@@ -70,5 +74,3 @@ npm i
 npm start
 
 
-“This project is a part of a hackathon run by
-https://www.katomaran.com ” 
